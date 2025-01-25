@@ -42,6 +42,12 @@ O **Controller** é responsável por:
 
 - `controller`: Contém o `usuarioController`, que conecta o **Model** e a **View**.
 
+## 🚨 Desvantagens
+
+1. **Alto Acoplamento da View com o Controller**: Para que o **Controller** chame o método de exibição na **View**, é necessário passar uma instância da `MainActivity` para o **Controller**, o que cria um acoplamento forte entre essas duas camadas. Isso pode dificultar a manutenção do código e torná-lo menos modular.
+
+2. **Dificuldade para Testes**: Como a **View** é baseada em uma **Activity**, não podemos instanciá-la diretamente nos testes. Isso pode dificultar a realização de testes unitários eficientes para o **Controller**, já que ele depende de uma instância da **MainActivity** para interagir com a interface.
+
 ## 🧑‍💻 Contato
 Entre em contato! 😁
 
